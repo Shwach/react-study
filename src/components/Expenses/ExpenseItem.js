@@ -1,5 +1,6 @@
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
+import Card from '../UI/Card';
 
 function ExpenseItem(props) {
     //리액트와 상관없는 순수 자바스크립트 (동적 표현을 위한 상수 선언)
@@ -13,10 +14,8 @@ function ExpenseItem(props) {
     const expenseTitle = 'Car Insurance';
     const expenseAmount = 294.67;*/
 
-   
-
     return (
-        <div className="expense-item">
+        <Card className="expense-item">
             {/*<div>{props.date.toISOString()}</div>*/}
 
             <ExpenseDate date={props.date}></ExpenseDate>
@@ -25,7 +24,7 @@ function ExpenseItem(props) {
                 <h2>{props.title}</h2> 
                 <div className = "expense-item__price">${props.amount}</div>
             </div>
-        </div>
+        </Card>
     );
 }
 
